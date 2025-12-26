@@ -17,12 +17,10 @@ body {
     margin: 0 auto;
     padding: 0 20px;
 }
-
-/* Header Styles */
 header {
     background: #ffffff;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: sticky;
+    position: relative;
     top: 0;
     z-index: 1000;
     border-bottom: 4px solid #2563eb;
@@ -79,7 +77,12 @@ header.scrolled {
     margin-bottom: 8px;
     text-align: center;
 }
-
+.school-name {
+  position: relative;
+  top: auto;
+  left: auto;
+  transform: none;
+}
 .motto {
     display: flex;
     flex-direction: column;
@@ -246,7 +249,6 @@ nav ul {
     margin: 0 auto 24px;
     line-height: 1.6;
 }
-
 .features-grid {
     display: flex;
     flex-direction: column;
@@ -586,15 +588,30 @@ footer {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-    nav {
-        display: none;
-    }
-    
+    @media (max-width: 768px) {
+  .nav-menu {
+    display: flex;         
+    flex-direction: column; 
+    gap: 10px;             
+    text-align: center;
+}
+.navbar {
+  background-color: #333;
+  padding: 10px;
+}
+
+.nav-menu li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+.nav-menu li a:hover {
+  color: #ffcc00;
+}
     .mobile-menu-btn {
         display: block;
     }
-    
     .school-name {
         font-size: 16px;
     }
